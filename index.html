@@ -55,9 +55,19 @@
 <div class="firstSentence">Design has many parallels to the Eskimo mother's situation in the way they are ethically judged.</div> <div class="paragraph">The aim of this paper is to break down a design process into the Platonic framework of an ethical action (an action that is useful to the agent, pleasant to the agent, useful to society, pleasant to society) and discover, justify, and exemplify a structure that would allow designers to criticize the ethics of their work in any context they are in. </div>
 </p>
 <p>
-<div class="firstSentence">This paper enters the reader directly into my internal debate as I have been prompted to create a digital artifact and begin questioning my justification, responsibilities, and ultimately the ethics of the project and my process.</div> <div class="paragraph">The format of this paper is representative of the internal debate we have human beings when we are battling to commit to a decision. I am guiding you along this discussion because I want you to understand more than just my conclusion but also experience my journey there.</div>
+<div class="firstSentence">This paper enters the reader directly into my internal debate as I have been prompted to create a digital artifact and begin questioning my justification, responsibilities, and ultimately the ethics of the project and my process.</div> <div class="paragraph">The format of this paper is representative of the internal debate we have human beings when we are battling to commit to a decision. I am guiding you along this discussion because I want you to understand more than just my conclusion but also experience my <div id="introClick">journey there.</div></div>
 </p>
 </div>
+
+<div id="introduction">
+		<h2>Introduction</h2>
+    	<div class="naomi">
+        There is a deficiency in my design process. I feel as though I am striving to create solutions for people’s lives without the ethics to support my endeavor.
+        </div>
+        <div class="abram">
+        A stimulating proclamation, where is the cradle of this reservation?
+        </div>
+    </div>
      
       </div>
     </div>
@@ -80,6 +90,7 @@ $(document).ready(function() {
 	var progress = 50;
 	$("#abstract").hide();
 	$("#preface").hide();
+	$("#introduction").hide();
 	
 	
 	var nanobar = new Nanobar();
@@ -119,13 +130,16 @@ $(document).ready(function() {
 	  });
 	  
 	  $(".firstSentence").click(function(evt){
-		  var indexor  = $(this).index();
-		  $(".paragraph:hidden").eq(0).toggle(200);
+		  $(".paragraph").toggle(200);
 	  });
 	  
 	  $(".firstSentence").hover(function() {
 		    $(this).toggleClass('hightlight');
 		  });
+		  
+		    $("#introClick").click(function(evt){
+		  $("#introduction").toggle(700);
+	  });
 });
 
 </script>
