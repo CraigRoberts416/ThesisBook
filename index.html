@@ -9,17 +9,37 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/thesis.css" rel="stylesheet">
 <link href="css/font.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.css"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.structure.css"></script>
+<script type="text/javascript" src="js/jquery-ui.structure.min.css"></script>
+<script type="text/javascript" src="js/jquery-ui.theme.css"></script>
+<script type="text/javascript" src="js/jquery-ui.theme.min.css"></script>
+<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 </head>
 <body>
 <nav> Thou Ought To </nav>
+	
+    
     <div id="wrapper" class="container">
-      
+      <div id="searchForm">
+            
+            <form>
+    
+                <input type="text" >
+            
+        	</form>
+            
+    		<div id="results"></div>     
+               
+    </div>
       <div id="thesis"  >
         <div class="row vcenter">
         <h1 id="mainStatement" class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">Ethical Design is Design that is most pleasant and useful for the designer and the user. </h1>
-        
         </div>
         
         
@@ -963,6 +983,31 @@ After I complete revamping and creating my projects to satisfy my framework, I w
 <script src="js/nanobar.min.js"></script>
 <script>
 $(document).ready(function() {
+	
+	$("#searchForm").hide();
+	
+	var $rows = $('p');
+	
+	 $(document).on("keydown", function (e) {
+		  
+		  var p = $( "p" );
+		  var position = p.position();
+		  
+		  if(e.which == 39)
+		  
+		  {
+			  	$("#searchForm").show(300);
+		  }
+	  	
+		 if(e.which == 13)
+		  
+		  {
+			  	$("#searchForm").hide(300);
+		  }
+	  
+	  });
+
+
 
 	var progress =10;
 	$("#abstract").hide();
